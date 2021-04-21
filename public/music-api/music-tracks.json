@@ -1,0 +1,82 @@
+[
+    {
+        "song_title": "Crawling",
+        "song_name": "crawling",
+        "song_album_name": "Hybrid Theory",
+        "singer_name": "Chester Bennington",
+        "song_cover_pic": "hybrid-theory-linkin-park.jpg",
+        "song_total_duration": "03:29"
+    },
+    {
+        "song_title": "Faint",
+        "song_name": "faint",
+        "song_album_name": "Meteora",
+        "singer_name": "Mike Shinoda, Chester Bennington",
+        "song_cover_pic": "meteora-linkin-park.jpg",
+        "song_total_duration": "02:42"
+    },
+    {
+        "song_title": "From The Inside",
+        "song_name": "from-the-inside",
+        "song_album_name": "Meteora",
+        "singer_name": "Mike Shinoda, Chester Bennington",
+        "song_cover_pic": "meteora-linkin-park.jpg",
+        "song_total_duration": "02:55"
+    },
+    {
+        "song_title": "I'll Be Gone",
+        "song_name": "i'll-be-gone",
+        "song_album_name": "Living Things",
+        "singer_name": "Chester Bennington",
+        "song_cover_pic": "living-things-linkin-park.jpg",
+        "song_total_duration": "03:31"
+    },
+    {
+        "song_title": "In The End",
+        "song_name": "in-the-end",
+        "song_album_name": "Hybrid Theory",
+        "singer_name": "Mike Shinoda, Chester Bennington",
+        "song_cover_pic": "hybrid-theory-linkin-park.jpg",
+        "song_total_duration": "03:37"
+    },
+    {
+        "song_title": "Iridescent",
+        "song_name": "iridescent",
+        "song_album_name": "A Thousand Suns",
+        "singer_name": "Mike Shinoda, Chester Bennington",
+        "song_cover_pic": "a-thousand-suns-linkin-park.jpg",
+        "song_total_duration": "04:56"
+    },
+    {
+        "song_title": "Lost In The Echo",
+        "song_name": "lost-in-the-echo",
+        "song_album_name": "Living Things",
+        "singer_name": "Mike Shinoda, Chester Bennington",
+        "song_cover_pic": "living-things-linkin-park.jpg",
+        "song_total_duration": "03:25"
+    },
+    {
+        "song_title": "Numb",
+        "song_name": "numb",
+        "song_album_name": "Meteora",
+        "singer_name": "Chester Bennington",
+        "song_cover_pic": "meteora-linkin-park.jpg",
+        "song_total_duration": "03:07"
+    },
+    {
+        "song_title": "Papercut",
+        "song_name": "papercut",
+        "song_album_name": "Hybrid Theory",
+        "singer_name": "Mike Shinoda, Chester Bennington",
+        "song_cover_pic": "hybrid-theory-linkin-park.jpg",
+        "song_total_duration": "03:04"
+    },
+    {
+        "song_title": "The Catalyst",
+        "song_name": "the-catalyst",
+        "song_album_name": "A Thousand Suns",
+        "singer_name": "Mike Shinoda, Chester Bennington",
+        "song_cover_pic": "a-thousand-suns-linkin-park.jpg",
+        "song_total_duration": "05:39"
+    }
+]

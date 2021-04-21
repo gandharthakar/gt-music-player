@@ -1,0 +1,9 @@
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json
+.env
+.npm-debug.log
+.DS_Store
+.ds_store
+*.DS_Store

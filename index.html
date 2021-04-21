@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+		<title>GT Music Player</title>
+		<meta name="description" content="/null">
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="public/img/favicons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="public/img/favicons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="public/img/favicons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="public/img/favicons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="public/img/favicons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="public/img/favicons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="public/img/favicons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="public/img/favicons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="public/img/favicons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="public/img/favicons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="public/img/favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="public/img/favicons/favicon-16x16.png">
+		<link rel="manifest" href="public/img/favicons/manifest.json">
+		<link rel="mask-icon" href="public/img/favicons/safari-pinned-tab.svg" color="#000000">
+		<meta name="msapplication-TileColor" content="#000000">
+		<meta name="msapplication-TileImage" content="public/img/favicons/mstile-144x144.png">
+		<!-- Address bar color Change in chrome -->
+		<meta name="theme-color" content="#000000">
+		<meta name="msapplication-navbutton-color" content="#000000">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000000">
+		<!-- Stylesheet -->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+		<link href="public/css/styles.css" rel="stylesheet" />
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+			<![endif]-->
+
+		<!--  Facebook and Twitter meta tag sharing  -->
+		<meta property="og:title" content="title content here" />
+		<meta property="og:description" content="Desciption goes here" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="website url or page url" />
+		<meta property="og:site_name" content="site name" />
+		<meta property="og:image" content="image path" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content="link of website" />
+		<meta name="twitter:title" content="title goes here" />
+		<meta name="twitter:description" content="description goes here" />
+		<meta name="twitter:image:src" content="image path to show on twitter" />
+		<meta name="twitter:site" content="site name" />
+	</head>
+	<body>
+		<div class="music-player-outer">
+			<div class="music-player-background" id="mpbg" style="background-image: url('public/music-data/covers/hybrid-theory-linkin-park.jpg');">
+				<div class="music-player-container" id="musicPlayer">
+					<audio src="public/music-data/tracks/papercut.mp3" id="audioElem"></audio>
+					<div class="music-player-cover-container">
+						<div class="music-player-cover">
+							<img src="public/music-data/covers/hybrid-theory-linkin-park.jpg" id="musicCover" alt="Music Cover" title="Song Album Cover Picture" />
+						</div>
+					</div>
+					<div class="music-information-container">
+						<div class="music-information-uielm">
+							<p class="music-info name">
+								<span class="cat-title">Song Name :</span> <span id="songName">Papercut</span>
+							</p>
+							<p class="music-info">
+								<span class="cat-title">Album Name :</span> <span id="albumName">Hybrid Theory</span>
+							</p>
+							<p class="music-info">
+								<span class="cat-title">Singer Name :</span> <span id="artistName">Mike Shinoda, Chester Bennington</span>
+							</p>
+						</div>
+					</div>
+					<div class="music-player-controls-outer">
+						<div class="music-player-progress-outer">
+							<div class="music-player-progress-container" title="Song Progress" id="musicProgressContainer">
+								<div class="music-player-progress" id="musicProgress"></div>
+							</div>
+							<div class="song-length-container">
+								<div class="left-container" id="songCountableDuration">00:00</div>
+								<div class="right-container" id="songTotalDuration">00:00</div>
+							</div>
+						</div>
+						<div class="music-player-controller-outer">
+							<ul class="music-player-controller">
+								<li>
+									<button type="button" class="music-player-cntrlbtn loop-btn" title="Loop Song" id="loopBtn">
+										<svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+											<g>
+												<path class="fill" d="m16.4511 5.78427c.1191.24912.0137.54765-.2354.6668l-1.5367.73497c2.2065.67942 3.821 2.66237 3.821 5.03136 0 2.9382-2.4836 5.2826-5.5 5.2826-.2761 0-.5-.2239-.5-.5s.2239-.5.5-.5c2.5065 0 4.5-1.9381 4.5-4.2826 0-2.0667-1.5491-3.81763-3.6331-4.20354l1.0762 2.05884c.1279.2447.0333.5468-.2115.6748-.2447.1279-.5468.0332-.6747-.2115l-1.5-2.86959c-.0629-.12025-.0742-.26089-.0313-.38963s.1363-.23452.2587-.29306l3-1.43479c.2491-.11914.5476-.01378.6668.23534z"/>
+												<path class="fill" d="m7.78427 17.5489c-.24911.1192-.35448.4177-.23534.6668.11915.2491.41768.3545.6668.2354l2.99997-1.4348c.1224-.0586.2158-.1643.2587-.2931.0429-.1287.0316-.2694-.0313-.3896l-1.49999-2.8696c-.12792-.2447-.43001-.3394-.67474-.2115-.24472.128-.33941.4301-.21148.6748l1.07621 2.0588c-2.08399-.3859-3.6331-2.1368-3.6331-4.2035 0-2.3445 1.99354-4.2826 4.5-4.2826.2761 0 .5-.22386.5-.5s-.2239-.5-.5-.5c-3.01639 0-5.5 2.34439-5.5 5.2826 0 2.369 1.6145 4.3519 3.82102 5.0314z"/>
+												<path class="fill" d="m1.5 12c0-5.79899 4.70101-10.5 10.5-10.5 5.799 0 10.5 4.70101 10.5 10.5 0 5.799-4.701 10.5-10.5 10.5-5.79899 0-10.5-4.701-10.5-10.5zm10.5-9.5c-5.24671 0-9.5 4.25329-9.5 9.5 0 5.2467 4.25329 9.5 9.5 9.5 5.2467 0 9.5-4.2533 9.5-9.5 0-5.24671-4.2533-9.5-9.5-9.5z" />
+											</g>
+										</svg>
+									</button>
+								</li>
+								<li>
+									<button type="button" class="music-player-cntrlbtn prev-btn" title="Previous Song" id="prevBtn">
+										<svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+											<g>
+												<path class="fill" d="m15.2166 7.54935c.1732.08326.2834.25845.2834.45065v8c0 .1922-.1102.3674-.2834.4507-.1732.0832-.3789.0598-.5289-.0603l-5.00005-4c-.1186-.0948-.18765-.2385-.18765-.3904s.06905-.2955.18765-.3904l5.00005-4.00003c.15-.12007.3557-.14348.5289-.06022zm-4.4162 4.45065 3.6996 2.9597v-5.91938z" fill-rule="evenodd"/>
+												<path class="fill" d="m8.5 8c0-.27614-.22386-.5-.5-.5s-.5.22386-.5.5v8c0 .2761.22386.5.5.5s.5-.2239.5-.5z"/>
+												<path class="fill" clip-rule="evenodd" d="m1.5 12c0-5.79899 4.70101-10.5 10.5-10.5 5.799 0 10.5 4.70101 10.5 10.5 0 5.799-4.701 10.5-10.5 10.5-5.79899 0-10.5-4.701-10.5-10.5zm10.5-9.5c-5.24671 0-9.5 4.25329-9.5 9.5 0 5.2467 4.25329 9.5 9.5 9.5 5.2467 0 9.5-4.2533 9.5-9.5 0-5.24671-4.2533-9.5-9.5-9.5z" fill-rule="evenodd"/>
+											</g>
+										</svg>
+									</button>
+								</li>
+								<li>
+									<button type="button" class="music-player-cntrlbtn play-pause-btn" title="Play/Pause Song" id="playPauseBtn">
+										<svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="playBtn">
+											<g>
+												<path class="fill" d="m9.765 6.576c-.15414-.09633-.34841-.10143-.50738-.01332-.15898.08811-.25762.25556-.25762.43732v10c0 .1818.09864.3492.25762.4373.15897.0881.35324.083.50738-.0133l8-5c.1462-.0914.235-.2516.235-.424s-.0888-.3326-.235-.424zm6.7916 5.424-6.5566 4.0979v-8.19578z"/>
+												<path class="fill" d="m12 1.5c-5.79899 0-10.5 4.70101-10.5 10.5 0 5.799 4.70101 10.5 10.5 10.5 5.799 0 10.5-4.701 10.5-10.5 0-5.79899-4.701-10.5-10.5-10.5zm-9.5 10.5c0-5.24671 4.25329-9.5 9.5-9.5 5.2467 0 9.5 4.25329 9.5 9.5 0 5.2467-4.2533 9.5-9.5 9.5-5.24671 0-9.5-4.2533-9.5-9.5z"/>
+											</g>
+										</svg>
+										<svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="pauseBtn">
+											<g>
+												<path class="fill" d="m10 8.5c0-.27614-.22386-.5-.5-.5s-.5.22386-.5.5v7c0 .2761.22386.5.5.5s.5-.2239.5-.5z"/>
+												<path class="fill" d="m14.5 8c.2761 0 .5.22386.5.5v7c0 .2761-.2239.5-.5.5s-.5-.2239-.5-.5v-7c0-.27614.2239-.5.5-.5z"/>
+												<path class="fill" clip-rule="evenodd" d="m12 1.5c-5.79899 0-10.5 4.70101-10.5 10.5 0 5.799 4.70101 10.5 10.5 10.5 5.799 0 10.5-4.701 10.5-10.5 0-5.79899-4.701-10.5-10.5-10.5zm-9.5 10.5c0-5.24671 4.25329-9.5 9.5-9.5 5.2467 0 9.5 4.25329 9.5 9.5 0 5.2467-4.2533 9.5-9.5 9.5-5.24671 0-9.5-4.2533-9.5-9.5z" fill-rule="evenodd"/>
+											</g>
+										</svg>
+									</button>
+								</li>
+								<li>
+									<button type="button" class="music-player-cntrlbtn next-btn" title="Next Song" id="nextBtn">
+										<svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+											<g>
+												<path class="fill" d="m15.2166 7.54935c.1732.08326.2834.25845.2834.45065v8c0 .1922-.1102.3674-.2834.4507-.1732.0832-.3789.0598-.5289-.0603l-5.00005-4c-.1186-.0948-.18765-.2385-.18765-.3904s.06905-.2955.18765-.3904l5.00005-4.00003c.15-.12007.3557-.14348.5289-.06022zm-4.4162 4.45065 3.6996 2.9597v-5.91938z" fill-rule="evenodd"/>
+												<path class="fill" d="m8.5 8c0-.27614-.22386-.5-.5-.5s-.5.22386-.5.5v8c0 .2761.22386.5.5.5s.5-.2239.5-.5z"/>
+												<path class="fill" clip-rule="evenodd" d="m1.5 12c0-5.79899 4.70101-10.5 10.5-10.5 5.799 0 10.5 4.70101 10.5 10.5 0 5.799-4.701 10.5-10.5 10.5-5.79899 0-10.5-4.701-10.5-10.5zm10.5-9.5c-5.24671 0-9.5 4.25329-9.5 9.5 0 5.2467 4.25329 9.5 9.5 9.5 5.2467 0 9.5-4.2533 9.5-9.5 0-5.24671-4.2533-9.5-9.5-9.5z" fill-rule="evenodd"/>
+											</g>
+										</svg>
+									</button>
+								</li>
+								<li>
+									<button type="button" class="music-player-cntrlbtn mute-btn" title="Mute Song" id="muteBtn">
+										<svg class="svg-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve">
+											<g>
+												<path class="fill" d="M131.033,151.054H0.13v209.891h130.903L330.957,512V0L131.033,151.054z M121.067,330.96H30.114V181.039h90.953V330.96z M300.973,451.764L151.051,338.49V173.51L300.973,60.236V451.764z"/>
+												<polygon class="fill" points="511.87,206.632 490.668,185.43 441.3,234.798 391.933,185.43 370.731,206.632 420.098,256 370.731,305.368 391.933,326.57 441.3,277.201 490.668,326.57 511.87,305.368 462.502,256 	"/>
+											</g>
+										</svg>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="public/js/music-player.js"></script>
+	</body>
+</html>

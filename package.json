@@ -1,0 +1,16 @@
+{
+  "name": "gt-music-player",
+  "version": "1.0.0",
+  "description": "null",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gandhar Thakar",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-util": "^3.0.8"
+  }
+}

@@ -1,0 +1,186 @@
+
+// Media Queries
+
+$md: 1199px; // < 1200px
+$sm: 1000px; // < 992px
+$xs: 767px; // < 768px
+$std_tablet_landscape: 1024px; // < 1025px
+
+// Mixins
+
+@mixin outline($oline) {
+	outline: $oline;
+	-webkit-outline: $oline;
+	-moz-outline: $oline;
+	-o-outline: $oline;
+	-ms-outline: $oline;
+}
+
+@mixin remove-select-box-arrow {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+}
+
+@mixin box-sizing($bs) {
+	box-sizing: $bs;
+	-webkit-box-sizing: $bs;
+	-moz-box-sizing: $bs;
+	-o-box-sizing: $bs;
+	-ms-box-sizing: $bs;
+}
+
+@mixin static-link() {
+	text-decoration: none !important;
+	color: inherit;
+}
+
+@mixin font-fix() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-o-border-radius: $radius;
+	-ms-border-radius: $radius;
+}
+
+@mixin def-border-radius() {
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+}
+
+@mixin def-transition() {
+	transition: all ease-in-out 0.2s;
+	-webkit-transition: all ease-in-out 0.2s;
+	-moz-transition: all ease-in-out 0.2s;
+	-o-transition: all ease-in-out 0.2s;
+	-ms-transition: all ease-in-out 0.2s;
+}
+
+@mixin transition($transition) {
+	transition: $transition;
+	-webkit-transition: $transition;
+	-moz-transition: $transition;
+	-o-transition: $transition;
+	-ms-transition: $transition;
+}
+
+// generic transform
+@mixin transform($transforms) {
+	transform: $transforms;
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+}
+
+@mixin animation-name($anim) {
+	animation-name: $anim;
+	-webkit-animation-name: $anim;
+	-moz-animation-name: $anim;
+	-o-animation-name: $anim;
+	-ms-animation-name: $anim;
+}
+
+@mixin animation-duration($anim) {
+	animation-duration: $anim;
+	-webkit-animation-duration: $anim;
+	-moz-animation-duration: $anim;
+	-o-animation-duration: $anim;
+	-ms-animation-duration: $anim;
+}
+
+@mixin animation-delay($anim) {
+	animation-delay: $anim;
+	-webkit-animation-delay: $anim;
+	-moz-animation-delay: $anim;
+	-o-animation-delay: $anim;
+	-ms-animation-delay: $anim;
+}
+
+@mixin animation-iteration-count($anim) {
+	animation-iteration-count: $anim;
+	-webkit-animation-iteration-count: $anim;
+	-moz-animation-iteration-count: $anim;
+	-o-animation-iteration-count: $anim;
+	-ms-animation-iteration-count: $anim;
+}
+
+@mixin animation-direction($anim) {
+	animation-direction: $anim;
+	-webkit-animation-direction: $anim;
+	-moz-animation-direction: $anim;
+	-o-animation-direction: $anim;
+	-ms-animation-direction: $anim;
+}
+
+@mixin animation-timing-function($anim) {
+	animation-timing-function: $anim;
+	-webkit-animation-timing-function: $anim;
+	-moz-animation-timing-function: $anim;
+	-o-animation-timing-function: $anim;
+	-ms-animation-timing-function: $anim;
+}
+
+// rotate
+@mixin rotate ($deg) {
+	@include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+//transform origin
+@mixin transform-origin ($origin) {
+	transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+	-moz-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+}
+
+//CSS Filter
+@mixin filter ($filterProp) {
+	filter: $filterProp;
+	-webkit-filter: $filterProp;
+	-moz-filter: $filterProp;
+	-o-filter: $filterProp;
+	-ms-filter: $filterProp;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+	@if $inset {
+		box-shadow:inset $top $left $blur $color;
+		-webkit-box-shadow:inset $top $left $blur $color;
+		-moz-box-shadow:inset $top $left $blur $color;
+		-o-box-shadow:inset $top $left $blur $color;
+		-ms-box-shadow:inset $top $left $blur $color;
+	} @else {
+		box-shadow: $top $left $blur $color;
+		-webkit-box-shadow: $top $left $blur $color;
+		-moz-box-shadow: $top $left $blur $color;
+		-o-box-shadow: $top $left $blur $color;
+		-ms-box-shadow: $top $left $blur $color;
+	}
+}
