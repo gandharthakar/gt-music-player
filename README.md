@@ -1,4 +1,4 @@
-# gt-music-player
+# GT (Gandhar Thakar) Music Player
 
 This is simple music player app created by me using, HTML, CSS, SASS And Javascript.
 
