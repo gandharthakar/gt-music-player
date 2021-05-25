@@ -1,13 +1,21 @@
 {
   "name": "gt-music-player",
   "version": "1.0.0",
-  "description": "null",
+  "description": "Simple pure JavaScript music player app.",
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Gandhar Thakar",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gandharthakar/gt-music-player.git"
+  },
+  "author": "gandharthakar",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gandharthakar/gt-music-player/issues"
+  },
+  "homepage": "https://github.com/gandharthakar/gt-music-player#readme",
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
